@@ -1,2 +1,5 @@
-package com.delivery.deliveryfood.domain;public class Order {
+package com.delivery.deliveryfood.domain;
+
+public class Order {
+
 }
