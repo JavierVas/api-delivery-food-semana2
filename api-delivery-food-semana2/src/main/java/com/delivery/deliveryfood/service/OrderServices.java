@@ -44,7 +44,7 @@ public class OrderServices {
         return orders;
     }
 
-    Order findOrderById(String orderId) {
+    public Order findOrderById(String orderId) {
         return orders.stream().filter(order -> orderId.equals(order.getId())).findFirst().orElse(null);
     }
 
