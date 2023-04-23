@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "8f07a9c7-ff53-4540-a686-ff4ffe26d68d",
+		"name": "Delivery-Food-Semana2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26925056",
+		"_collection_link": "https://warped-space-373224.postman.co/workspace/Team-Workspace~655e7a7b-9583-4527-821a-09a678967038/collection/26925056-8f07a9c7-ff53-4540-a686-ff4ffe26d68d?action=share&creator=26925056&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Listar Menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"Juan Perez\",\r\n  \"customerEmail\": \"juanperez@example.com\",\r\n  \"deliveryAddress\": \"Calle 123 #45-67\",\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Hamburguesa\",\r\n      \"description\": \"Deliciosa hamburguesa con carne y queso\",\r\n      \"price\": 10.99\r\n    },\r\n    {\r\n      \"name\": \"Pizza\",\r\n      \"description\": \"Pizza recién horneada con tus ingredientes favoritos\",\r\n      \"price\": 12.99\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una Orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"customerName\": \"John Doe\",\r\n\"customerAddress\": \"123 Main St\",\r\n\"items\": [\r\n        {\r\n        \"name\": \"Hamburguesa\",\r\n        \"description\": \"Deliciosa hamburguesa con carne y queso\",\r\n        \"price\": 10.99\r\n        },\r\n        {\r\n        \"name\": \"Ensalada\",\r\n        \"description\": \"Ensalada fresca con lechuga, tomate y otros vegetales\",\r\n        \"price\": 6.99\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
